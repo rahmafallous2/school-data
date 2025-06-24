@@ -1,0 +1,10 @@
+Layla has grades [89, 91, 86, 84] and the average grade is 87.5
+Tariq has grades [77, 84, 73] and the average grade is 78.0
+Jana has grades [100, 97, 94, 99] and the average grade is 97.5
+Ziad has grades [62, 71, 75, 78] and the average grade is 71.5
+
+The student with the highest average is Jana with 97.5
+The most consistent performance's student is Jana with a grade difference of 6
+Students with any grade below 70: Ziad
+Total number of grades entered: 15
+Overall class average is: 84.0
