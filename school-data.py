@@ -53,3 +53,17 @@ def students_below_70():
             students_below.append(key)
         return students_below
 print(f"The student below 70 is {students_below_70()}")
+
+#total grades entered across the whole class
+def total_grades():
+    total = 0
+    for key in class_journal:
+        grades = class_journal[key]
+        count = 0
+        for grade in grades:
+            count += 1  
+        total += count  
+    return total
+print(f"The total number of grades entered is {total_grades()}")
+
+    
