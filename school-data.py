@@ -66,4 +66,15 @@ def total_grades():
     return total
 print(f"The total number of grades entered is {total_grades()}")
 
-    
+#overall class avg
+def overall_class_avg():
+    total = 0
+    count = 0
+    for key in class_journal:
+        grades = class_journal[key]
+        for grade in grades:
+            total += grade
+            count += 1
+            return total/count
+        print(f"The overall class average is {overall_class_avg()}")
+overall_class_avg()
