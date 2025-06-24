@@ -7,13 +7,8 @@ class_journal = {
 
 def calculate_average(grades):
     return round(sum(grades) / len(grades), 2)
-
-#print the class_journal
-def printJournal():
-    output = ""
-    for key in class_journal:
-        output += f"{key} has grades {class_journal[key]} and the average grade is {calculate_average(class_journal[key])}\n"
-    return output
+for key in class_journal:
+    print(f"{key} has grades {class_journal[key]} and the average grade is {calculate_average(class_journal[key])}")
 
 #highest avg
 def highest_average():
@@ -95,6 +90,12 @@ new_grades = [["Jana", 99], ["Ziad", 78], ["Layla", 84]]
 for student, grade in new_grades:
     class_journal[student].append(grade)
 
+#print the class_journal in txt file
+def printJournal():
+    output = ""
+    for key in class_journal:
+        output += f"{key} has grades {class_journal[key]} and the average grade is {calculate_average(class_journal[key])}\n"
+    return output
 #txt file
 output_text = ""
 output_text += printJournal()
@@ -114,7 +115,7 @@ output_text += f"Total number of grades entered: {total}\n"
 overall_avg = overall_class_avg()
 output_text += f"Overall class average is: {overall_avg}\n"
 
-# Save output to text file
+# saving output to text file
 with open("grades_analysis_report.txt", "w") as file:
     file.write(output_text)
 
