@@ -78,3 +78,8 @@ def overall_class_avg():
             return total/count
         print(f"The overall class average is {overall_class_avg()}")
 overall_class_avg()
+
+#new grades
+new_grades = [["Jana", 99], ["Ziad", 78], ["Layla", 84]]
+for student, grade in new_grades:
+    class_journal[student].append(grade)
