@@ -4,7 +4,7 @@ class_journal = {
     "Jana": [100, 97, 94],
     "Ziad": [62, 71, 75]
 }
-
+#avg for each student
 def calculate_average(grades):
     return round(sum(grades) / len(grades), 2)
 for key in class_journal:
@@ -19,9 +19,9 @@ def highest_average():
         if avg > highest_avg:
             highest_avg = avg
             highest_avg_name = key
-    return highest_avg_name, highest_avg
+    return highest_avg_name
 
-print(f"THe student with highest average is {highest_average()[0]} ")
+print(f"THe student with highest average is {highest_average()} ")
 
 #most consistent performance
 def most_consistent_performance():
@@ -44,7 +44,7 @@ def most_consistent_performance():
             smallest_diff = diff
             most_consistent_name = key
 
-    return most_consistent_name, smallest_diff
+    return most_consistent_name
 
 print(f"The most consistent performance's student is {most_consistent_performance()} ")
 
@@ -100,11 +100,11 @@ def printJournal():
 output_text = ""
 output_text += printJournal()
 
-highest_student, highest_avg = highest_average()
-output_text += f"\nThe student with the highest average is {highest_student} with {highest_avg}\n"
+highest_student = highest_average()
+output_text += f"\nThe student with the highest average is {highest_student}\n"
 
 most_consistent_student, consistency_diff = most_consistent_performance()
-output_text += f"The most consistent performance's student is {most_consistent_student} with a grade difference of {consistency_diff}\n"
+output_text += f"The most consistent performance's student is {most_consistent_student} \n"
 
 students_below = students_below_70()
 output_text += f"Students with any grade below 70: {', '.join(students_below) if students_below else 'None'}\n"
